@@ -1,24 +1,3 @@
-ScoreBoardCFG = ScroeBoardCFG or {} 
-
-EventMenu.jobs = {
-    category = {
-        {
-            name = "Citizen", -- JOB CATEGORY
-            color = Color(241,113,113), -- JOB COLOR
-            jobs = { TEAM_SASA, TEAM_SOSA } -- JOBS LIST
-        },
-
-        {
-            name = "Mafia",
-            color = Color(255,255,255),
-            jobs = { TEAM_LALA, TEAM_LOLA } 
-        }
-    }
-}
-
-
-
-
 local luna_core = getMaterial("luna_sup_brand/luna-core")
 local sup_logo_var1 = getMaterial("luna_sup_brand/1EMP")
 local ping_xorosho = getMaterial("icon16/flag_green")
