@@ -506,13 +506,13 @@ local function ToggleScoreboard()
 
 	local categories = {} -- Таблица для распределения игроков по категориям 
 
-for _, catData in ipairs(EventMenu.jobs.category) do -- Берёт имена категорий
+for _, catData in ipairs(ScoreBoardCFG.jobs.category) do -- Берёт имена категорий
     categories[catData.name] = {}
 end
 
 for _, ply in ipairs(player.GetAll()) do -- Само распределение игроков по категориям
     local plyTeam = ply:Team()
-    for _, catData in ipairs(EventMenu.jobs.category) do
+    for _, catData in ipairs(ScoreBoardCFG.jobs.category) do
         for _, jobID in ipairs(catData.jobs) do
             if plyTeam == jobID then
                 table.insert(categories[catData.name], ply)
@@ -527,7 +527,7 @@ end
 local ypos = 0
 local categoryLabels = {}
 
-for _, catData in ipairs(EventMenu.jobs.category) do 
+for _, catData in ipairs(ScoreBoardCFG.jobs.category) do 
     local category = catData.name
     local players = categories[category] or {}
     local categoryColor = catData.color or color_white
